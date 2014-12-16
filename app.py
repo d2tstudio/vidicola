@@ -1,15 +1,22 @@
 from flask import Flask, render_template
-app = Flask(__name__)
-app.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
-app.debug = True
 
-@app.route('/')
-def hello_world():
-    return render_template('base.jade')
+def create_app(configfile=None):
 
-@app.route('/hello/<name>')
-def hello(name=None):
-    return render_template('base.jade', name=name)
+    # CREATE APP
+    inedicola = Flask(__name__)
 
-if __name__ == "__main__":
-    app.run()
+    # MOVE THESE TO ENVIRONMENT
+    inedicola.config['DEBUG'] = 'true'
+
+    # ADD EXTENTIONS
+    inedicola.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
+
+    # ROUTING
+    @inedicola.route('/')
+    def index():
+        return render_template('components.jade')
+
+    return inedicola
+
+if __name__ == '__main__':
+    create_app().run(debug=True)

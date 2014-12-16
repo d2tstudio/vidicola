@@ -1,2 +1,4 @@
 Flask
 pyjade
+flask-appconfig
+flask-bootstrap
