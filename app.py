@@ -8,7 +8,7 @@ def create_app(configfile=None):
     # MOVE THESE TO ENVIRONMENT
     inedicola.config['DEBUG'] = 'true'
 
-    # ADD EXTENTIONS
+    # ADD EXTENSIONS
     inedicola.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
 
     # ROUTING
