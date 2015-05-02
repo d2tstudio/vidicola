@@ -21,20 +21,12 @@ html(lang="en")
       
       block navbar
           // Static navbar
-          .navbar.navbar-inverse(role='navigation')
-            .container-fluid
+          .navbar.navbar-inverse.navbar-transparent(role='navigation')
               .navbar-header
-                button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-                  span.sr-only Toggle navigation
-                  span.icon-bar
-                  span.icon-bar
-                  span.icon-bar
                 a.navbar-brand(href='#') Inedicola
-              .navbar-collapse.collapse
                 ul.nav.navbar-nav.navbar-right
-                  li.active
+                  li.active.pull-right
                     a(href='./') Accedi
-              // /.nav-collapse
             // /.container-fluid
         
       
@@ -48,4 +40,10 @@ html(lang="en")
 
       block footer
           .footer
-            h5 Here is the footer
+            ol.breadcrumb
+              li
+                a Assistenza & Faq
+              li
+                a Aziende
+              li
+                a Guida
