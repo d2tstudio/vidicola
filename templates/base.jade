@@ -22,13 +22,13 @@ html(lang="en")
       block navbar
           // Static navbar
           .navbar.navbar-inverse.navbar-transparent
-            parent(role='navigation')
+            .container
               .navbar-header
                 a.navbar-brand(href='/')
                   img(src="{{STATIC_URL}}/img/logo.svg")
-                ul.nav.navbar-nav.navbar-right
-                  li.active.pull-right
-                    a.btn.btn-link.btn-outline(href='./') Accedi
+              ul.nav.navbar-nav.navbar-right
+                li
+                  a.btn.btn-outline.navbar-btn(href='./') Accedi
       
       block main
         h1.title Index (default)
