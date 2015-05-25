@@ -16,28 +16,30 @@ html(lang="en")
       script(src='static/js/less.min.js', type='text/javascript')
 
   body
-    
-    .container-fluid
-      
+    .container
       block navbar
-          // Static navbar
-          .navbar.navbar-inverse.navbar-transparent
-            .container
-              .navbar-header
-                a.navbar-brand(href='/')
-                  img(src="{{STATIC_URL}}/img/logo.svg")
+        // Static navbar
+        .navbar.navbar-inverse.navbar-transparent(role='navigation')
+          .container
+            .navbar-header
+              a.navbar-brand(href='/')
+                img(src="{{STATIC_URL}}/img/logo.svg")
+            .navbar-collapse.collapse
               ul.nav.navbar-nav.navbar-right
                 li
-                  a.btn.btn-outline.navbar-btn(href='./') Accedi
-      
-      block main
-        h1.title Index (default)
-        #container
-          if name
-            p Hello #{name}
-          else
-            p Hello World
+                  a.btn.btn-outline(href='./') Accedi
+            // /.nav-collapse
+        // /container    
+    
+    block main
+      h1.title Index (default)
+      #container
+        if name
+          p Hello #{name}
+        else
+          p Hello World
 
+    .container
       block footer
           .footer
             ol.breadcrumb
