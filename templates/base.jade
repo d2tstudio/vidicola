@@ -17,18 +17,18 @@ html(lang="en")
 
   body
     
-    .container.mobileview
+    .container-fluid
       
       block navbar
           // Static navbar
-          .navbar.navbar-inverse.navbar-transparent(role='navigation')
+          .navbar.navbar-inverse.navbar-trans
+            parent(role='navigation')
               .navbar-header
-                a.navbar-brand(href='#') Inedicola
+                a.navbar-brand(href='#')
+                  img(src="{{STATIC_URL}}/img/logo.svg")
                 ul.nav.navbar-nav.navbar-right
                   li.active.pull-right
                     a(href='./') Accedi
-            // /.container-fluid
-        
       
       block main
         h1.title Index (default)
