@@ -3,26 +3,23 @@ extends base
 block main
   .mast
     .msg
-      h1 Logo Il Giorno
+      img.testata_logo(src="{{STATIC_URL}}/img/giorno-white.svg")
   
   .testate
     h5 Copia Singola
     .form-group 
-        a.btn.btn-lg.btn-primary.form-control(href="options") Un Giorno
-    .form-group 
-      button.btn.btn-lg.btn-primary.form-control Il Giorno
-    .form-group 
-      button.btn.btn-lg.btn-primary.form-control La Nazione
+        a.btn.btn-lg.btn-primary.btn-block(href="/") Un Giorno
 
     h5 Abbonamenti con rinnovo automatico
     .form-group 
-        a.btn.btn-lg.btn-primary.form-control(href="options") 1 settimana
+        a.btn.btn-lg.btn-primary.btn-block(href="options") 1 settimana
     .form-group 
-        a.btn.btn-lg.btn-primary.form-control(href="options") 1 mese
+        a.btn.btn-lg.btn-primary.btn-block(href="options") 1 mese
     .form-group 
-        a.btn.btn-lg.btn-primary.form-control(href="options") 6 mesi
+        a.btn.btn-lg.btn-primary.btn-block(href="options") 6 mesi
     .form-group 
-        a.btn.btn-lg.btn-primary.form-control(href="options") 12 mesi
+        a.btn-block.btn.btn-lg.btn-primary(href="options") 12 mesi
 
     h5
       | Hai un codice sconto? Lo potrai inserire prima di pagare per ottenere il tuo prezzo speciale
+      

@@ -21,7 +21,7 @@ def create_app(configfile=None):
     @inedicola.route('/')
     def index():
         opts = defaults.copy()
-        return render_template('components.jade', **opts)
+        return render_template('home.jade', **opts)
 
     @inedicola.route('/options')
     def options():
