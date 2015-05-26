@@ -1,0 +1,50 @@
+extends base
+
+block main
+  .mast
+    .container
+      .msg
+        img.testata-logo(src="{{STATIC_URL}}/img/giorno-white.svg")
+        h4 Abbonamento Semestrale
+        p.quiet &euro;34.99 
+          span.quiet.strike &euro;44.99 
+        .row
+          .col-md-4.col-sm-4.col-lg-4
+            a.btn.btn-primary.btn-lg.btn-outline.btn-block.quiet(href="options") Modifica
+  
+  .testate
+    .container
+      
+      .row
+        .col-md-3.hidden-mobile
+          h5 Istruzioni
+          p Nostrud aliqua sint sit anim tempor anim deserunt cupidatat do in consectetur sint. 
+          a.btn.btn-primary(data-toggle='collapse', href='#collapseExample', aria-expanded='false', aria-controls='collapseExample')
+            | Link with href
+          button.btn.btn-primary(type='button', data-toggle='collapse', data-target='#collapseExample', aria-expanded='false', aria-controls='collapseExample')
+            | Button with data-target
+          #collapseExample.collapse
+            .well
+              | ...
+
+        
+        .col-md-4.col-md-offset-1
+          h5.msg Tipo di cliente
+
+          #accordion.panel-group(role='tablist', aria-multiselectable='true')
+              .panel.panel-default
+                  #headingOne.panel-heading(role='tab')
+                    h4.panel-title
+                      a(data-toggle='collapse', data-parent='#accordion', href='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+                        | Collapsible Group Item #1     
+                  #collapseOne.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne')
+                    .panel-body
+                      | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+              .panel.panel-default
+                #headingTwo.panel-heading(role='tab')
+                  h4.panel-title
+                    a.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                      | Collapsible Group Item #2
+                  #collapseTwo.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingTwo')
+                    .panel-body
+                      | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.

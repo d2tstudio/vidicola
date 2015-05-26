@@ -4,16 +4,31 @@ COMPONENTS
 */
 
 /*
+ * LOS LOGOS
+ */
+.testata-logo {
+    max-width: 250px;
+}
+
+/*
  * NAVBAR
  */
-
-// Limit height of brand image
 .navbar {
   margin-top:20px;
   .navbar-brand > img {
     max-height: 25px;
     padding: 0px;
   }
+  border-radius: 0px;
+  margin-bottom: 50px;
+  &.navbar-transparent {
+    background-color: transparent !important;
+    border:0px;
+    position:absolute;
+    top:0px;
+    z-index:100;
+  }
+
 }
 
 /*
@@ -35,13 +50,9 @@ COMPONENTS
       font-weight: 300;
     }
     p {
-      padding:0px 0px 20px;
+      padding:0px 0px 0px;
     }
 
-    // TESTATE LOGO
-    .testata_logo {
-        max-width: 250px;
-    }
   }
 }
 
@@ -57,9 +68,30 @@ COMPONENTS
    font-size: 80%;
    letter-spacing: 1.5px;
 
+   img.testata-logo {
+     max-height: 20px;
+   }
  }
 
 .btn-outline {
     background-color:transparent !important;
     border: 1px solid white;
+    
+}
+
+/*
+ * FOOTER
+ */
+
+.footer {
+  .breadcrumb {
+    text-align: center;
+  }
+}
+
+/*
+ * BREADCRUMBS
+ */
+.breadcrumb {
+  padding: 50px;
 }

@@ -4,18 +4,27 @@ block main
   .mast
     .container 
       .msg
-        h1 Hello There
-        p Here is the grammatical subtext
+        h1 Le notizie per te, a modo tuo
+        p.quiet Sit proident do eu consectetur minim magna aliquip esse.
 
   .container
     .testate
       h5 Welcome to Inedicola choose your poison
-      .form-group 
-          a.btn.btn-lg.btn-primary.btn-block(href="/options") Il Resto del Carlino
-      .form-group 
-        button.btn.btn-lg.btn-primary.btn-block Il Giorno
-      .form-group 
-        button.btn.btn-lg.btn-primary.btn-block La Nazione
+      .row
+        .col-md-4
+          .form-group 
+              a.btn.btn-lg.btn-primary.btn-block(href="/options")
+                img.testata-logo(src="{{STATIC_URL}}/img/rdc-white.svg")
+
+        .col-md-4
+          .form-group 
+            a.btn.btn-lg.btn-primary.btn-block(href="/options")
+                img.testata-logo(src="{{STATIC_URL}}/img/nazione-white.svg")
+
+        .col-md-4
+          .form-group 
+            a.btn.btn-lg.btn-primary.btn-block(href="/options")
+                img.testata-logo(src="{{STATIC_URL}}/img/giorno-white.svg")
 
     .bannerAd
       h5 Codice promo

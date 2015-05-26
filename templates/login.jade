@@ -1,0 +1,32 @@
+extends base
+
+block main
+  .mast
+    .container
+      .msg
+        img.testata-logo(src="{{STATIC_URL}}/img/giorno-white.svg")
+        h4 Abbonamento Semestrale
+        p.quiet &euro;34.99 
+          span.quiet.strike &euro;44.99 
+        .row
+          .col-md-4.col-sm-4.col-lg-4
+            a.btn.btn-primary.btn-lg.btn-outline.btn-block.quiet(href="options") Modifica
+  
+  .testate
+    .container
+      
+      .row
+        .col-md-3.hidden-mobile
+          h5 Istruzioni
+          p Nostrud aliqua sint sit anim tempor anim deserunt cupidatat do in consectetur sint. 
+        
+        .col-md-4.col-md-offset-1
+          h5.msg Se sei un utente registrato con QN, clicca su Login per accedere.
+          .form-group
+            a.btn.btn-lg.btn-primary.btn-block(href="tipo") Login
+
+        .col-md-4
+          h5.msg  Se non sei registrato ancora crea il tuo account e clicca su Registrati
+          .form-group
+            a.btn.btn-lg.btn-primary.btn-block(href="/") Registrarsi
+            

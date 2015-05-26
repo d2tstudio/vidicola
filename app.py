@@ -15,7 +15,7 @@ def create_app(configfile=None):
     # DEFAULTS
     defaults = {
         'STATIC_URL': inedicola.config.get('STATIC_URL', '/static/'),
-    } 
+    }
 
     # ROUTING
     @inedicola.route('/')
@@ -27,6 +27,17 @@ def create_app(configfile=None):
     def options():
         opts = defaults.copy()
         return render_template('options.jade', **opts)
+
+    @inedicola.route('/login')
+    def login():
+        opts = defaults.copy()
+        return render_template('login.jade', **opts)
+
+    @inedicola.route('/tipo')
+    def tipo():
+        opts = defaults.copy()
+        return render_template('tipo.jade', **opts)
+
 
     return inedicola
 
