@@ -9,7 +9,7 @@ block main
   .guida.main
     .container
       .row
-        .col-md-6
+        .col-md-7
           h3 Cos'è inEdicola?
           p inEdicola! è la versione e-paper dei quotidiani La Nazione, Il Resto del Carlino e Il Giorno.
           p Solo inEdicola! ti dà la possibilità di consultare fin dalle prime ore del mattino il tuo quotidiano in versione digitale esattamente uguale alla copia in edicola.
@@ -18,7 +18,6 @@ block main
           p Interattivo: grazie ad un sofisticato motore di ricerca interno. 
           p Completo: grazie alla rapida consultazione di un archivio di 15 giorni antecedenti alla data di consultazione.
 
-        .col-md-6
           h3 Come acquistare
           p Scegliendo la versione digitale del tuo quotidiano avrai modo di scegliere la tipologia di abbonamento più adatta alle tue esigenze e la testata (edizione locale) di tuo interesse.  
           p L'importo dell'abbonamento sarà sempre in evidenza durante ogni tua scelta. Compilare i dati di registrazione e/o fatturazione per completare la registrazione. Una e-mail ti riepilogherà i dati di accesso (nome utente, password) per accedere ai servizi inEdicola!
@@ -42,3 +41,84 @@ block main
               | Monrif Net srl Bancoposta
               | ABI 07601 CAB 02400 CIN "O"
               | C/C 000074506502
+          
+
+        .col-md-4.col-md-offset-1
+            form.search
+              .form-group
+                .input-group
+                  .input-group-addon  
+                    span.icon.icon-search-find
+                  input.form-control.borderless(type="text", placeholder="Cerca FAQ") 
+
+                #accordion.panel-group(role='tablist', aria-multiselectable='true')
+                    .panel.panel-default
+                        #id.panel-heading(role='tab')
+                          h4.panel-title
+                            a.btn-link(data-toggle='collapse', data-parent='#accordion', href='#FAQCosa', aria-expanded='true', aria-controls='collapseOne')
+                              span.icon.icon-chevron-right(aria-hidden='true')
+                              | Cosa occorre per consultare il quotidiano?
+                        #FAQCosa.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingOne')
+                          .panel-body
+                            | Per consultare il tuo quotidiano non occorre alcun software aggiuntivo.
+                            | Basta collegarsi ad internet e accedere al proprio browser di navigazione.
+
+                            | Per una corretta fruizione del servizio inEdicola! i browser internet supportati sono:
+
+                            | Internet Explorer v.6 o superiore
+                            | Firefox v.3.6 o superiore
+                            | Chrome tutte le versioni
+                            | Safari v.5 o superiore
+                            | Opera v.10 o superiore 
+
+                            | Se usi un browser non presente in questo elenco o non aggiornato potresti incorrere in alcuni problemi di visualizzazione.
+                            | Ti consigliamo di utilizzare sempre la versione più aggiornata del tuo browser preferito.
+
+                    .panel.panel-default
+                        #id.panel-heading(role='tab')
+                          h4.panel-title
+                            a(data-toggle='collapse', data-parent='#accordion', href='#FAQOra', aria-expanded='true', aria-controls='collapseOne')
+                              span.icon.icon-chevron-right(aria-hidden='true')
+                              | A che ora è disponibile solitamente il quotidiano digitale?
+                        #FAQOra.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingOne')
+                          .panel-body
+                            | Il quotidiano digitale viene pubblicato dalle ore 6 del mattino.
+            
+
+                    .panel.panel-default
+                        #id.panel-heading(role='tab')
+                          h4.panel-title
+                            a(data-toggle='collapse', data-parent='#accordion', href='#FAQGiorni', aria-expanded='true', aria-controls='collapseOne')
+                              span.icon.icon-chevron-right(aria-hidden='true')
+                              | In quali giorni non viene pubblicato il quotidiano?
+                        #FAQGiorni.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingOne')
+                          .panel-body
+                            | Il quotidiano non viene pubblicato online negli stessi giorni in cui non lo trovate in edicola, ovvero:
+
+                            ul 
+                              li 1 gennaio
+                              li Lunedì di Pasqua
+                              li 2 maggio
+                              li 16 agosto
+                              li 25 e 26 dicembre
+            
+                    .panel.panel-default
+                        #id.panel-heading(role='tab')
+                          h4.panel-title
+                            a(data-toggle='collapse', data-parent='#accordion', href='#FAQPrecedenti', aria-expanded='true', aria-controls='collapseOne')
+                              span.icon.icon-chevron-right(aria-hidden='true')
+                              | E' possibile sfogliare edizioni precedenti a quella odierna?
+                        #FAQPrecedenti.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingOne')
+                          .panel-body
+                            | Sì, il servizio inEdicola permette sempre di consultare il quotidiano entro 15 giorni precedenti all'edizione del giorno.            
+
+                    .panel.panel-default
+                        #id.panel-heading(role='tab')
+                          h4.panel-title
+                            a(data-toggle='collapse', data-parent='#accordion', href='#FAQStampa', aria-expanded='true', aria-controls='collapseOne')
+                              span.icon.icon-chevron-right(aria-hidden='true')
+                              | Posso stampare un singolo articolo in versione testuale?
+                        #FAQStampa.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingOne')
+                          .panel-body
+                            | Sì. Basterà aprire l'articolo e cliccare sull'icona di “stampa”.
+                            | Non solo, è inoltre possibile inviare l'articolo direttamente via mail, oppure condividerlo sui principali social network.

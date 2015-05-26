@@ -43,6 +43,11 @@ def create_app(configfile=None):
         opts = defaults.copy()
         return render_template('guida.jade', **opts)
 
+    @inedicola.route('/assistenza')
+    def assistenza():
+        opts = defaults.copy()
+        return render_template('assistenza.jade', **opts)
+
 
     return inedicola
 
