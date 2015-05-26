@@ -10,41 +10,100 @@ block main
           span.quiet.strike &euro;44.99 
         .row
           .col-md-4.col-sm-4.col-lg-4
-            a.btn.btn-primary.btn-lg.btn-outline.btn-block.quiet(href="options") Modifica
+            a.btn.btn-primary.btn-outline.btn-block.quiet(href="options") Modifica
   
-  .testate
+  .tipo
     .container
       
       .row
         .col-md-3.hidden-mobile
           h5 Istruzioni
           p Nostrud aliqua sint sit anim tempor anim deserunt cupidatat do in consectetur sint. 
-          a.btn.btn-primary(data-toggle='collapse', href='#collapseExample', aria-expanded='false', aria-controls='collapseExample')
-            | Link with href
-          button.btn.btn-primary(type='button', data-toggle='collapse', data-target='#collapseExample', aria-expanded='false', aria-controls='collapseExample')
-            | Button with data-target
-          #collapseExample.collapse
-            .well
-              | ...
 
-        
+          h5 Aziende & P.A.
+          p Nostrud aliqua sint sit anim tempor anim deserunt cupidatat do in consectetur sint. 
+
+          h5 Bonifico Bancario
+          p Nostrud aliqua sint sit anim tempor anim deserunt cupidatat do in consectetur sint. 
+          
+          
         .col-md-4.col-md-offset-1
-          h5.msg Tipo di cliente
+          h5 Tipo di cliente
 
           #accordion.panel-group(role='tablist', aria-multiselectable='true')
+
               .panel.panel-default
-                  #headingOne.panel-heading(role='tab')
+                  #PersonaFisica.panel-heading(role='tab')
                     h4.panel-title
-                      a(data-toggle='collapse', data-parent='#accordion', href='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
-                        | Collapsible Group Item #1     
-                  #collapseOne.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne')
+                      a.btn.btn-link(data-toggle='collapse', data-parent='#accordion', href='#PersonaFisicaForm', aria-expanded='true', aria-controls='collapseOne')
+                        span.icon.icon-chevron-right(aria-hidden='true')
+                        | Persona Fisica
+                  #PersonaFisicaForm.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne')
                     .panel-body
-                      | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+                      form
+                           .form-group
+                             label(for='') Nome
+                             input#id.form-control(type='text', placeholder='Nome')
+                           .form-group
+                             label(for='') Cognome
+                             input#id.form-control(type='text', placeholder='Cognome')                               
+                           .form-group
+                             label(for='') Codice Fiscale
+                             input#id.form-control(type='text', placeholder='Codice Fiscale')
+                           .form-group
+                             label(for='') Indirizzo
+                             input#id.form-control(type='text', placeholder='Indirizzo')
+                           .form-group
+                             label(for='') CAP
+                             input#id.form-control(type='text', placeholder='CAP')
+                           .form-group
+                             label(for='') Città
+                             input#id.form-control(type='text', placeholder='Città')
+                           .form-group
+                             label(for='') Provincia
+                             select.form-control
+                              option Provincia
+                              option Arezzo
+                           
               .panel.panel-default
-                #headingTwo.panel-heading(role='tab')
-                  h4.panel-title
-                    a.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
-                      | Collapsible Group Item #2
-                  #collapseTwo.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingTwo')
+                  #Azienda.panel-heading(role='tab')
+                    h4.panel-title
+                      a.btn.btn-link(data-toggle='collapse', data-parent='#accordion', href='#AziendaForm', aria-expanded='true', aria-controls='collapseOne')
+                        span.icon.icon-chevron-right(aria-hidden='true')
+                        | Azienda
+                  #AziendaForm.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingOne')
                     .panel-body
                       | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+
+              .panel.panel-default
+                  #PA.panel-heading(role='tab')
+                    h4.panel-title
+                      a.btn.btn-link(data-toggle='collapse', data-parent='#accordion', href='#PAForm', aria-expanded='true', aria-controls='collapseOne')
+                        span.icon.icon-chevron-right(aria-hidden='true')
+                        | Pubblica Amministrazione
+                  #PAForm.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingOne')
+                    .panel-body
+                      | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+        .col-md-4
+          h5 Applicare Codice Sconto
+          .input-group
+            input.form-control(type='text', placeholder='Codice sconto')
+            span.input-group-btn
+              button.btn.btn-primary(type='button') Applica
+          h5 Pagamento
+          form.pagamento
+                .form-group
+                  input#id.form-control(type='text', placeholder='Numero di carta credito')
+                .form-group
+                  .row
+                    .col-md-3
+                      label(for='') Scadenza
+                      input#id.form-control(type='text', placeholder='MM')                               
+                    .col-md-3 
+                      label(for='') &nbsp;
+                      input#id.form-control(type='text', placeholder='YY')                               
+                    .col-md-6
+                      label(for='') Codice di Sicurezza
+                      input#id.form-control(type='text', placeholder='Codice')                   
+                 button.btn.btn-primary.form-control(type='submit') Paga &euro; 34.99
+            a.btn.btn-outline.form-control() Bonifico Bancario Clicca Qui

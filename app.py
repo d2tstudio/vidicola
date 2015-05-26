@@ -38,6 +38,11 @@ def create_app(configfile=None):
         opts = defaults.copy()
         return render_template('tipo.jade', **opts)
 
+    @inedicola.route('/guida')
+    def guida():
+        opts = defaults.copy()
+        return render_template('guida.jade', **opts)
+
 
     return inedicola
 
