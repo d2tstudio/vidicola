@@ -121,5 +121,67 @@ block main
       
 
     .tab-pane.fade#profilo(role="tabpanel")
-      h1 Profilo
-    
+      form
+        .row
+          .col-md-4
+            h5 Dati Personali
+            .form-group
+              label.sr-only(for='') Nome
+              input#id.form-control(type='text', placeholder='Nome')
+            .form-group
+              label.sr-only(for='') Cognome
+              input#id.form-control(type='text', placeholder='Cognome')                               
+            .form-group
+              label.sr-only(for='') Codice Fiscale
+              input#id.form-control(type='text', placeholder='Codice Fiscale')
+            .form-group
+              label.sr-only(for='') Indirizzo
+              input#id.form-control(type='text', placeholder='Indirizzo')
+            .form-group
+              label.sr-only(for='') CAP
+              input#id.form-control(type='text', placeholder='CAP')
+            .form-group
+              label.sr-only(for='') Città
+              input#id.form-control(type='text', placeholder='Città')
+            .form-group
+              label.sr-only(for='') Provincia
+              select.form-control
+                option Provincia
+                option Arezzo
+
+          .col-md-4
+            h5 Dati Fiscale
+            .form-group
+               label.sr-only(for='') Codice Fiscale
+               input#id.form-control(type='text', placeholder='Codice Fiscale')
+            .form-group
+               label.sr-only(for='') Ragione Sociale
+               input#id.form-control(type='text', placeholder='Ragione Sociale') 
+            .form-group
+               label.sr-only(for='') Partita IVA
+               input#id.form-control(type='text', placeholder='Partita IVA')
+            
+          .col-md-4
+            h5 &nbsp;
+            button.btn.btn-primary.btn-block(type="submit") Salva
+
+            h5 Istruzioni
+            p Non enim aliqua consectetur pariatur quis qui Lorem nostrud velit ullamco nulla occaecat ea. Esse est commodo elit commodo proident amet occaecat tempor cupidatat proident quis.
+            
+            h5 Dispositivi collegati
+            p Irure ipsum Lorem nisi proident minim quis cupidatat exercitation.
+            table.table.table-hover.table-responsive
+                  caption Connessi
+                  tbody
+                    tr
+                      td 
+                        span.icon.icon-phone-mobile 
+                        | iPad
+                      td
+                        span.pull-right.icon.icon-trash-bin                        
+                    tr
+                      td 
+                        span.icon.icon-laptop
+                        | Desktop
+                      td
+                        span.pull-right.icon.icon-trash-bin
