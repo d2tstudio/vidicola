@@ -53,6 +53,11 @@ def create_app(configfile=None):
         opts = defaults.copy()
         return render_template('azienda.jade', **opts)
 
+    @inedicola.route('/accessi')
+    def accessi():
+        opts = defaults.copy()
+        return render_template('accessi.jade', **opts)
+
 
     return inedicola
 

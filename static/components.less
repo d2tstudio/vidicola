@@ -8,6 +8,9 @@ COMPONENTS
  */
 .testata-logo {
     max-width: 250px;
+    &.small {
+      max-width: 150px;
+    }
 }
 
 /*
@@ -138,4 +141,18 @@ span.glyphicon, .icon {
     margin-right: 5px;
     padding-right: 0px;
   }
+}
+
+/*
+ * TABLES
+ */
+.table {
+  .icon {
+    font-size: 18px;
+    top: 4px;
+  }
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+  vertical-align: middle;
 }
