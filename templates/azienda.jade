@@ -1,0 +1,40 @@
+extends base
+
+block main
+  .mast
+    .container
+      .msg
+        h1 Aziende
+
+  .guida.main
+    .container
+      .row
+        .col-md-3
+          h3 Sei un azienda?
+          p Scopri l'offerta business che più si avvicina alle tue esigenze. Compila il form, per la richiesta di un preventivo
+        
+        .col-md-5.col-md-offset-1
+          h3 &nbsp;
+          form
+            .form-group.has-success.has-feedback
+              label.control-label.sr-only(for='') Nome
+              input#id.form-control(type='text', placeholder='Nome')
+              span.icon.icon-check-mark.form-control-feedback
+            .form-group
+              label.sr-only(for='') Cognome
+              input#id.form-control(type='text', placeholder='Cognome')                               
+            .form-group.has-error.has-feedback
+              label.control-label(for='') Email
+              input#id.form-control(type='email', placeholder='Email')
+              span.icon.icon-remove.form-control-feedback
+              p.help-block Email non valido
+            .form-group
+              label.sr-only(for='') Utenti
+              input#id.form-control(type='text', placeholder='Numero di utente contemporanee')
+              p.help-block Metterei una spiegazione qua forse
+            .form-group
+              label.sr-only(for='') Messagio
+              textarea#id.form-control(rows="5", placeholder='Messaggio')
+            .form-group
+              button.btn.btn-primary.form-control(type='submit') Invia Richiesta
+          

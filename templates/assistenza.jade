@@ -6,7 +6,13 @@ block main
       .msg
         h1 FAQ & Assistenza
   
-  .assistenza.main
+  .assistenza
+    ul.nav.nav-tabs.nav-justified.hidden-desktop
+      li.active(role='presentation')
+        a(href='#') FAQ
+      li(role='presentation')
+        a(href='#') Assistenza
+    
     .container
       .row
         .col-md-7
