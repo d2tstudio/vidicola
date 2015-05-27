@@ -1,0 +1,66 @@
+extends base
+
+block main
+  .mast
+    .container
+      .msg
+        h1 Benvenuto, Derry
+  
+  .assistenza 
+    .tabbar(role='tabpanel')
+      .container
+         // Nav tabs
+         ul.nav.nav-tabs.nav-justified.hidden-desktop(role="tablist")
+           li.active(role='presentation')
+             a(href='#accessi', aria-controls='home', role='tab', data-toggle='tab') Accessi
+           li(role='presentation')
+             a(href='#ordini', aria-controls='profile', role='tab', data-toggle='tab') Ordini
+           li(role='presentation')
+             a(href='#profilo', aria-controls='messages', role='tab', data-toggle='tab') Profilo    
+
+
+  .tab-content.container
+    .tab-pane.active#accessi(role="tabpanel")
+      .col-md-4
+        h5 Abbonamenti
+        .alert.alert-success.alert-dismissable
+            p.lead 
+              img.testata-logo.small(src="{{STATIC_URL}}/img/giorno-white.svg")
+            p.small Scade fra dieci giorni
+        .alert.alert-warning
+            p.lead 
+              img.testata-logo.small(src="{{STATIC_URL}}/img/giorno-white.svg")
+            p.small Scade fra dieci giorni
+        
+      .col-md-4
+        h5 Copie Singole
+        .alert.alert-success.alert-dismissable
+            p.lead 
+              img.testata-logo.small(src="{{STATIC_URL}}/img/giorno-white.svg")
+            p.small Scade fra dieci giorni
+        
+      .col-md-4
+        h5 Dispositivi collegati
+        p Irure ipsum Lorem nisi proident minim quis cupidatat exercitation.
+        table.table.table-hover.table-responsive
+              caption Connessi
+              tbody
+                tr
+                  td 
+                    span.icon.icon-phone-mobile 
+                    | iPad
+                  td
+                    span.pull-right.icon.icon-trash-bin                        
+                tr
+                  td 
+                    span.icon.icon-laptop
+                    | Desktop
+                  td
+                    span.pull-right.icon.icon-trash-bin
+                        
+    .tab-pane.fade#ordini(role="tabpanel")
+      h1 Ordini
+
+    .tab-pane.fade#profilo(role="tabpanel")
+      h1 Profilo
+    

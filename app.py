@@ -53,10 +53,10 @@ def create_app(configfile=None):
         opts = defaults.copy()
         return render_template('azienda.jade', **opts)
 
-    @inedicola.route('/accessi')
-    def accessi():
+    @inedicola.route('/account')
+    def account():
         opts = defaults.copy()
-        return render_template('accessi.jade', **opts)
+        return render_template('account.jade', **opts)
 
 
     return inedicola
