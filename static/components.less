@@ -31,7 +31,26 @@ COMPONENTS
     top:0px;
     z-index:100;
   }
-
+}
+/*
+ * NAVS
+ */
+.tabbar {
+  background-color: #1A8ACC;
+  .nav > li {
+      & > a {
+        .smallcaps;
+        font-weight: 600;
+        line-height: 36px;
+        color: white;
+        &:hover {
+          color: @gray-dark;
+        }
+      }
+      &.active > a {
+        color: @gray-dark;
+      }
+  }
 }
 
 /*
