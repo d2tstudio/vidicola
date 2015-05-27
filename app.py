@@ -33,10 +33,10 @@ def create_app(configfile=None):
         opts = defaults.copy()
         return render_template('login.jade', **opts)
 
-    @inedicola.route('/tipo')
-    def tipo():
+    @inedicola.route('/cart')
+    def cart():
         opts = defaults.copy()
-        return render_template('tipo.jade', **opts)
+        return render_template('cart.jade', **opts)
 
     @inedicola.route('/guida')
     def guida():
