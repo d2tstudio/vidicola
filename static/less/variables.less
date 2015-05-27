@@ -7,7 +7,7 @@
 @secondary:   #00468c;  // blue
 @background:  #363b40;  // dark blue/grey
 
-
+@primary-lighter: #1A8ACC;
 //== Colors
 //
 //## Gray and brand colors for use across Bootstrap.
@@ -420,7 +420,7 @@
 
 //=== Shared nav styles
 @nav-link-padding:                          10px 15px;
-@nav-link-hover-bg:                         @gray-lighter;
+@nav-link-hover-bg:                         lighten(@primary-lighter, 2%); //@gray-lighter;
 
 @nav-disabled-link-color:                   @gray-light;
 @nav-disabled-link-hover-color:             @gray-light;
@@ -428,7 +428,7 @@
 //== Tabs
 @nav-tabs-border-color:                     #fff; //#ddd;
 
-@nav-tabs-link-hover-border-color:          @gray-lighter;
+@nav-tabs-link-hover-border-color:          none; //@gray-lighter;
 
 @nav-tabs-active-link-hover-bg:             @body-bg;
 @nav-tabs-active-link-hover-color:          @gray;
