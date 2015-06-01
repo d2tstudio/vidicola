@@ -77,23 +77,26 @@ block main
                 td 17.05.2015
                 td Abbonamento 3 mesi
                 td 
-                  span.icon.pull-right.icon-trash-bin
+                  a.btn.btn-link.btn-sm.pull-right(type="button", data-toggle="modal", data-target=".cancel-abbonamento") 
+                    span.icon.icon-trash-bin
               tr
                 td 17.05.2015
                 td Abbonamento 3 mesi
                 td 
-                  span.icon.pull-right.icon-trash-bin
+                  a.btn.btn-link.btn-sm.pull-right(type="button", data-toggle="modal", data-target=".cancel-abbonamento") 
+                    span.icon.icon-trash-bin
               tr
                 td 17.05.2015
                 td Abbonamento 3 mesi
                 td 
-                  span.icon.pull-right.icon-trash-bin
+                  a.btn.btn-link.btn-sm.pull-right(type="button", data-toggle="modal", data-target=".cancel-abbonamento") 
+                    span.icon.icon-trash-bin
               tr
                 td 17.05.2015
                 td Abbonamento 3 mesi
                 td 
-                  span.icon.pull-right.icon-trash-bin
-
+                  a.btn.btn-link.btn-sm.pull-right(type="button", data-toggle="modal", data-target=".cancel-abbonamento") 
+                    span.icon.icon-trash-bin
 
           
         .col-md-4.col-md-offset-1
@@ -106,14 +109,16 @@ block main
                     td 
                       span.icon.icon-phone-mobile 
                       | iPad
-                    td
-                      span.pull-right.icon.icon-trash-bin                        
+                    td 
+                      a.btn.btn-link.btn-sm.pull-right(type="button", data-toggle="modal", data-target=".remove-device") 
+                        span.icon.icon-trash-bin
                   tr
                     td 
                       span.icon.icon-laptop
                       | Desktop
-                    td
-                      span.pull-right.icon.icon-trash-bin
+                    td 
+                      a.btn.btn-link.btn-sm.pull-right(type="button", data-toggle="modal", data-target=".remove-device") 
+                        span.icon.icon-trash-bin
 
           h5 Istruzioni
           p Non enim aliqua consectetur pariatur quis qui Lorem nostrud velit ullamco nulla occaecat ea. Esse est commodo elit commodo proident amet occaecat tempor cupidatat proident quis.
@@ -184,4 +189,32 @@ block main
                         span.icon.icon-laptop
                         | Desktop
                       td
-                        span.pull-right.icon.icon-trash-bin
+                        a(type="button", data-toggle="modal", data-target=".cancel-abbonamento") 
+                          span.pull-right.icon.icon-trash-bin
+
+
+  .cancel-abbonamento.modal.fade(role="dialog")
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span(aria-hidden='true') ×
+            h4.modal-title &nbsp;
+          .modal-body
+            h2 Sei sicuro di voler cancellare il tuo abbonamento?
+          .modal-footer
+            button.btn.btn-default(type='button', data-dismiss='modal') Annulla
+            button.btn.btn-danger(type='button') Cancella
+
+  .remove-device.modal.fade(role="dialog")
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span(aria-hidden='true') ×
+            h4.modal-title &nbsp;
+          .modal-body
+            h2 Sei sicuro di voler rimuovere questo dispositivo?
+          .modal-footer
+            button.btn.btn-default(type='button', data-dismiss='modal') Annulla
+            button.btn.btn-danger(type='button') Rimuovi

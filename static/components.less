@@ -1,6 +1,8 @@
 /*
 
 COMPONENTS
+Mainly bootstrap component overrides,
+but also some custom
 */
 
 /*
@@ -83,19 +85,23 @@ COMPONENTS
 /*
  * BUTTONS
  */
- .btn {
+.btn {
    text-transform: uppercase;
    letter-spacing: 1.5px;
 
    img.testata-logo {
      max-height: 20px;
    }
- }
+}
 
 .btn-outline {
     background-color:transparent;
     border: 1px solid white;
+}
 
+.btn-default:hover {
+  border-color: @gray-dark;
+  background-color: white;
 }
 
 /*
@@ -172,4 +178,26 @@ span.glyphicon, .icon {
 
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
   vertical-align: middle;
+}
+
+/*
+ * MODALS
+ */
+ .modal {
+    background-color: rgba(255,255,255,0.96);
+  .modal-content {
+    box-shadow: none;
+    background: none;
+    h1,h2,h3 {
+      text-align: center;
+    }
+    .modal-title, .modal-footer {
+      text-align: center;
+    }
+  }
+  .close {
+    font-size: 42px;
+    font-weight: 300;
+    display: none;
+  }
 }
