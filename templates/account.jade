@@ -49,14 +49,16 @@ block main
                   td 
                     span.icon.icon-phone-mobile 
                     | iPad
-                  td
-                    span.pull-right.icon.icon-trash-bin                        
+                  td 
+                    a.btn.btn-link.btn-sm.pull-right(type="button", data-toggle="modal", data-target=".remove-device") 
+                      span.icon.icon-trash-bin
                 tr
                   td 
                     span.icon.icon-laptop
                     | Desktop
-                  td
-                    span.pull-right.icon.icon-trash-bin
+                  td 
+                    a.btn.btn-link.btn-sm.pull-right(type="button", data-toggle="modal", data-target=".remove-device") 
+                      span.icon.icon-trash-bin
 
         h5 Istruzioni
         p Non enim aliqua consectetur pariatur quis qui Lorem nostrud velit ullamco nulla occaecat ea. Esse est commodo elit commodo proident amet occaecat tempor cupidatat proident quis.
@@ -182,15 +184,16 @@ block main
                       td 
                         span.icon.icon-phone-mobile 
                         | iPad
-                      td
-                        span.pull-right.icon.icon-trash-bin                        
+                      td 
+                        a.btn.btn-link.btn-sm.pull-right(type="button", data-toggle="modal", data-target=".remove-device") 
+                          span.icon.icon-trash-bin
                     tr
                       td 
                         span.icon.icon-laptop
                         | Desktop
-                      td
-                        a(type="button", data-toggle="modal", data-target=".cancel-abbonamento") 
-                          span.pull-right.icon.icon-trash-bin
+                      td 
+                        a.btn.btn-link.btn-sm.pull-right(type="button", data-toggle="modal", data-target=".remove-device") 
+                          span.icon.icon-trash-bin
 
 
   .cancel-abbonamento.modal.fade(role="dialog")

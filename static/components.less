@@ -9,7 +9,7 @@ but also some custom
  * LOS LOGOS
  */
 .testata-logo {
-    max-width: 250px;
+    max-width: 100%;
     &.small {
       max-width: 150px;
     }
@@ -101,7 +101,7 @@ but also some custom
 
 .btn-default:hover {
   border-color: @gray-dark;
-  background-color: white;
+  background-color: transparent;
 }
 
 /*
@@ -185,13 +185,11 @@ span.glyphicon, .icon {
  */
  .modal {
     background-color: rgba(255,255,255,0.96);
+    text-align: center;
   .modal-content {
     box-shadow: none;
     background: none;
     h1,h2,h3 {
-      text-align: center;
-    }
-    .modal-title, .modal-footer {
       text-align: center;
     }
   }

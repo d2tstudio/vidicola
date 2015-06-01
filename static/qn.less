@@ -13,14 +13,42 @@ For modal overlay
 @qn-border-radius: 0;
 
 .qn {
+  color: #fff;
+  a, .btn {
+    color: #fff;
+  }
   input, .btn {
-    border-radius: @qn-border-radius
+    border-radius: @qn-border-radius;
+    border: 0;
+    &.btn-primary {
+      background-color: @qn-primary;
+    }
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .btn-default {
+    color: @qn-secondary;
+  }
+  .btn-outline {
+    border: 1px solid #fff;
+    color: #fff;
+    &:hover {
+      background: @qn-primary;
+      border-color: @qn-primary;
+      // color: @qn-secondary;
+    }
   }
 
 /*
  * MODALS
  */
- .modal {
+ &.modal {
     background-color: rgba(52,77,102,0.96);
+    .row {
+      margin-bottom: 30px;
+    }
+    .testata-logo {
+      height: 30px;
+    }
   }
 }

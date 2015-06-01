@@ -30,7 +30,7 @@ html(lang="en")
             .navbar-collapse.collapse
               ul.nav.navbar-nav.navbar-right
                 li
-                  a.btn.btn-outline(href='/account') Accedi
+                  a.btn.btn-outline(type="button", data-toggle="modal", data-target=".qn-account") Accedi 
             // /.nav-collapse
         // /container    
     
@@ -53,20 +53,40 @@ html(lang="en")
               li
                 a(href="guida") Guida
               li
-                btn.btn.btn-primary(type="button", data-toggle="modal", data-target=".qn-account") Modal
+                a(type="button", data-toggle="modal", data-target=".qn-account") Qn
 
-    .qn-account.modal.fade
+    .qn-account.qn.modal.fade
         .modal-dialog
           .modal-content
             .modal-header
               button.close(type='button', data-dismiss='modal', aria-label='Close')
                 span(aria-hidden='true') ×
-              h4.modal-title Modal title
             .modal-body
-              p One fine body…
-            .modal-footer
-              button.btn.btn-default(type='button', data-dismiss='modal') Close
-              button.btn.btn-primary(type='button') Save changes
-          // /.modal-content
-        // /.modal-dialog
-      // /.modal
+              .container-fluid
+                .row
+                  .col-md-6
+                    h2 
+                      img.testata-logo.small(src="{{STATIC_URL}}/img/logo.svg")
+                  .col-md-6
+                    h2 
+                      img.testata-logo.small(src="{{STATIC_URL}}/img/qn_white.svg")
+                .row
+                  .col-md-12
+                    p.quiet Accedi a InEdicola con il tuo account di Quotidiano.net
+                .row
+                  .col-md-8.col-md-offset-2
+                    p msg area
+                    form
+                      .form-group
+                        label.sr-only(for='exampleInputEmail1') Email address
+                        input#exampleInputEmail1.form-control(type='email', placeholder='Enter email')
+                      .form-group
+                        label.sr-only(for='exampleInputPassword1') Password
+                        input#exampleInputPassword1.form-control(type='password', placeholder='Password')
+                      a.btn.btn-primary.btn-block(type='submit', href="/account") Accedi
+                      button.btn.btn-link.btn-block.quiet(type='button') Forgot Password
+                    
+                .row  
+                  .col-md-8.col-md-offset-2
+                    p.small Register here to create a QN login and access ALL services provided by Quotidiano.net
+                    a.btn.btn-default.btn-outline.btn-block(type="button") Registrati
