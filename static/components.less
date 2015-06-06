@@ -51,6 +51,34 @@ but also some custom
         color: @gray-dark;
       }
   }
+  .nav-tabs {
+    border-bottom-color: @brand-primary;
+    & > li {
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          border: 1px solid white;
+        }
+      }
+      & > a {
+        border-radius: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+  }
+}
+
+// To centralise left floated tabs
+.nav-container {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.tab-content {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /*
@@ -65,7 +93,7 @@ but also some custom
 
   .msg {
     position:absolute;
-    bottom:30px;
+    bottom:40px;
     color:white;
 
     h1 {
@@ -204,3 +232,12 @@ span.glyphicon, .icon {
     display: none;
   }
 }
+
+/*
+ * FORMS
+ */
+
+ select.form-control {
+   height: 50px;
+   color: #999;
+ }

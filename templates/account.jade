@@ -10,13 +10,14 @@ block main
     .tabbar(role='tabpanel')
       .container
          // Nav tabs
-         ul.nav.nav-tabs.nav-justified.hidden-desktop(role="tablist")
-           li.active(role='presentation')
-             a(href='#accessi', aria-controls='home', role='tab', data-toggle='tab') Accessi
-           li(role='presentation')
-             a(href='#ordini', aria-controls='profile', role='tab', data-toggle='tab') Ordini
-           li(role='presentation')
-             a(href='#profilo', aria-controls='messages', role='tab', data-toggle='tab') Profilo    
+         .nav-container
+           ul.nav.nav-tabs.hidden-desktop(role="tablist")
+             li.active(role='presentation')
+               a(href='#accessi', aria-controls='home', role='tab', data-toggle='tab') Accessi
+             li(role='presentation')
+               a(href='#ordini', aria-controls='profile', role='tab', data-toggle='tab') Ordini
+             li(role='presentation')
+               a(href='#profilo', aria-controls='messages', role='tab', data-toggle='tab') Profilo    
 
 
   .tab-content.container.main

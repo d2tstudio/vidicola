@@ -10,7 +10,7 @@ block main
     .tabbar(role='tabpanel')
       .container
          // Nav tabs
-         ul.nav.nav-tabs.nav-justified.hidden-desktop(role="tablist")
+         ul.nav.nav-tabs.hidden-desktop(role="tablist")
            li.active(role='presentation')
              a(href='#faq', aria-controls='faq', role='tab', data-toggle='tab') FAQ
            li(role='presentation')
@@ -20,7 +20,7 @@ block main
   .tab-content.container.main
     .tab-pane#assistenza(role="tabpanel")  
       .row
-        .col-md-5
+        .col-md-7
           h3 Richiesta Informazioni
           p Ea cillum ad tempor nisi eu minim et sint culpa minim laborum enim commodo.
           form
@@ -39,7 +39,7 @@ block main
             .form-group
               button.btn.btn-primary.form-control(type='submit') Invia Richiesta
 
-        .col-md-5.col-md-offset-2
+        .col-md-4.col-md-offset-1
           h3 Problemi di utilizzo
           p Ea cillum ad tempor nisi eu minim et sint culpa minim laborum enim commodo.
           
