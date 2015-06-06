@@ -58,8 +58,10 @@ but also some custom
  */
 .mast {
   background-color:@brand-primary;
-  min-height:300px;
+  min-height:340px;
   position:relative;
+  // default background to be overwritten per page I guess
+  background-image: url("img/masthead_tmp.jpg");
 
   .msg {
     position:absolute;
@@ -192,6 +194,9 @@ span.glyphicon, .icon {
     h1,h2,h3 {
       text-align: center;
     }
+  .modal-footer {
+    text-align: center;
+  }
   }
   .close {
     font-size: 42px;
