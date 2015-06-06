@@ -9,7 +9,7 @@ but also some custom
  * LOS LOGOS
  */
 .testata-logo {
-    max-width: 100%;
+    max-width: 90%;
     &.small {
       max-width: 150px;
     }
@@ -86,14 +86,14 @@ but also some custom
  */
 .mast {
   background-color:@brand-primary;
-  min-height:340px;
   position:relative;
+  min-height: 300px;
   // default background to be overwritten per page I guess
   background-image: url("img/masthead_tmp.jpg");
 
   .msg {
     position:absolute;
-    bottom:40px;
+    bottom:10px;
     color:white;
 
     h1 {
@@ -106,7 +106,18 @@ but also some custom
     }
 
   }
+
+  @media (min-width: @screen-md-min) {
+    min-height: 340px;
+    .msg {
+      bottom: 30px;
+    }
+  }
+
+
 }
+
+
 
 // BANNER
 .banner {
@@ -183,7 +194,7 @@ span.glyphicon, .icon {
 .form-control-feedback {
   position: absolute;
   margin-right:0px;
-  line-height: 52px;
+  line-height: 55px;
 }
 
 /*
