@@ -101,3 +101,6 @@
 .icon-trash-bin:before {
   content: "u";
 }
+.icon-clock:before {
+  content: "v";
+}

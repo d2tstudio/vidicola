@@ -21,24 +21,36 @@ block main
 
 
   .tab-content.container.main
-    .tab-pane.active#accessi(role="tabpanel")
+    .accessi.tab-pane.active#accessi(role="tabpanel")
       .col-md-4
         h5 Abbonamenti
-        .alert.alert-success.alert-dismissable
-            p.lead 
-              img.testata-logo.small(src="{{STATIC_URL}}/img/giorno-white.svg")
-            p.small Scade fra dieci giorni
-        .alert.alert-warning
-            p.lead 
-              img.testata-logo.small(src="{{STATIC_URL}}/img/giorno-white.svg")
-            p.small Scade fra dieci giorni
+        a(href="#")
+          .alert.alert-success.alert-dismissable
+              button.close(type="button") 
+                span.smallcaps Open
+                span.icon.icon-log-out 
+              p.lead 
+                img.testata-logo.small(src="{{STATIC_URL}}/img/rdc-white.svg")
+              p.small Scade fra dieci giorni
+        a(href="#")
+          .alert.alert-warning.alert-dismissable
+              button.close(type="button")
+                span.smallcaps In Attesa
+                span.icon.icon-clock
+              p.lead 
+                img.testata-logo.small(src="{{STATIC_URL}}/img/rdc-white.svg")
+              p.small Scade fra dieci giorni
         
       .col-md-4
         h5 Copie Singole
-        .alert.alert-success.alert-dismissable
-            p.lead 
-              img.testata-logo.small(src="{{STATIC_URL}}/img/giorno-white.svg")
-            p.small Scade fra dieci giorni
+        a(href="#")
+          .alert.alert-danger.alert-dismissable
+              button.close(type="button")
+                span.smallcaps Rinnova
+                span.icon.icon-repeat-redo
+              p.lead 
+                img.testata-logo.small(src="{{STATIC_URL}}/img/rdc-white.svg")
+              p.small Scade fra dieci giorni
         
       .col-md-4
         h5 Dispositivi collegati

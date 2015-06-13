@@ -252,3 +252,52 @@ span.glyphicon, .icon {
    height: 50px;
    color: #999;
  }
+
+ /*
+  * ACCEDI BUTTONS
+  */
+
+.accessi {
+  a {
+    text-decoration: none;
+  }
+
+  .alert {
+    p {
+      color:white !important;
+    }
+  }
+
+  button.close {
+    // Position
+    top:7px;
+    opacity: 1;
+    color: white;
+    text-shadow: none;
+
+    // font
+    .smallcaps {
+      opacity:0.4;
+      font-size:10px;
+      margin-right:10px;
+      vertical-align: middle;
+
+      @media (min-width: @screen-sm-max) {
+        display: none;
+      }
+
+      @media (min-width: @screen-lg-min) {
+        display: inline-block;
+      }
+    }
+
+    // icon
+    .icon {
+      top:5px;
+    }
+
+    @media (min-width: @screen-sm-min) {
+      top:10px;
+    }
+  }
+}
