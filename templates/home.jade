@@ -7,9 +7,9 @@ block main
         h1 Le notizie per te, a modo tuo
         p.quiet Sit proident do eu consectetur minim magna aliquip esse.
 
-  .container
+  .container.home
     .testate
-      h5 Welcome to Inedicola choose your poison
+      h5 Benvenuto in InEdicola, scegli il tuo giornale preferito
       .row
         .col-md-4
           .form-group 
@@ -26,12 +26,13 @@ block main
             a.btn.btn-lg.btn-primary.btn-block(href="/options")
                 img.testata-logo(src="{{STATIC_URL}}/img/giorno-white.svg")
 
-    .bannerAd
-      h5 Codice promo
-      .well
-        | Click here for your codice promo
+    .row
+      .col-md-6
+        .bannerAd
+          h5 Codice promo
+          a.btn.btn-outline.dark.btn-block(href="/codicepromo") Codice Promo
 
-    .bannerAd
-      h5 Cartaceo
-      .well
-        | Banner ad for cartaceo
+      .col-md-6
+        .bannerAd
+          h5 Cartaceo
+          a.btn.btn-outline.dark.btn-block(href="/cartaceo") Cartaceo
