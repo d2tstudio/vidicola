@@ -20,9 +20,13 @@ but also some custom
  */
 .navbar {
   margin-top:20px;
-  .navbar-brand > img {
-    max-height: 25px;
-    padding: 0px;
+  .navbar-brand {
+    width: 160px;
+    padding: 10px 0px;
+    > img {
+      padding: 0px;
+      float: left;
+    }
   }
   border-radius: 0px;
   margin-bottom: 50px;
@@ -138,6 +142,14 @@ but also some custom
 .btn-outline {
     background-color:transparent;
     border: 1px solid white;
+    &.dark {
+      border: 1px solid @gray-dark;
+      &:hover {
+        background:@brand-primary;
+        border: 1px solid @brand-primary;
+        color:white;
+      }
+    }
 }
 
 .btn-default:hover {
