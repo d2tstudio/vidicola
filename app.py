@@ -58,6 +58,11 @@ def create_app(configfile=None):
         opts = defaults.copy()
         return render_template('account.jade', **opts)
 
+    @inedicola.route('/promo')
+    def promo():
+        opts = defaults.copy()
+        return render_template('promo.jade', **opts)
+
 
     return inedicola
 

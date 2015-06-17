@@ -1,0 +1,32 @@
+extends base
+
+block main
+  .mast
+    .container
+      .msg
+        h1 Promo
+
+  .guida.main
+    .container
+      .row
+        .col-md-3
+          h3 Hai un codice promo?
+          p Per applicare lo sconto, inserisci il codice promo e il captcha
+        
+        .col-md-5.col-md-offset-1
+          h3 &nbsp;
+          form#promo
+            .form-group
+              label.control-label.sr-only(for='') Codice
+              input#id.form-control(type='text', placeholder='Codice Promo')
+            .form-group
+              label.sr-only(for='') Captcha
+              .input-group
+                .input-group-addon 
+                  span IMG
+                input#id.form-control(type='text', placeholder='Captcha')
+                .input-group-addon 
+                  a.icon.icon-repeat-redo
+            .form-group
+              button.btn.btn-primary.form-control(type='submit') Applica
+          
