@@ -4,7 +4,7 @@ block main
   .mast
     .container
       .msg
-        img.testata-logo(src="{{STATIC_URL}}/img/giorno-white.svg")
+        img.testata-logo(src="{{STATIC_URL}}/img/giorno-white.svg", onerror="this.src='{{STATIC_URL}}/img/rdc-white.png'")
         h4 Abbonamento Semestrale
         p.quiet &euro;34.99 
           span.quiet.strike &euro;44.99 
