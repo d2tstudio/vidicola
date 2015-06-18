@@ -53,44 +53,8 @@ html(lang="en")
               li
                 a(href="guida") Guida
 
-    .qn-account.qn.modal.fade
-        .modal-dialog
-          .modal-content
-            .modal-header
-              button.close(type='button', data-dismiss='modal', aria-label='Close')
-                span(aria-hidden='true') ×
-            .modal-body
-              .container-fluid
-                .row
-                  .col-md-6
-                    h2 
-                      img.testata-logo.small(src="{{STATIC_URL}}/img/logo.svg",onerror="this.src='{{STATIC_URL}}/img/logo.png'")
-                  .col-md-6
-                    h2 
-                      img.testata-logo.small(src="{{STATIC_URL}}/img/qn_white.svg", onerror="this.src='{{STATIC_URL}}/img/qn_white.png'")
-                .row
-                  .col-md-12
-                    p.quiet Accedi a InEdicola con il tuo account di Quotidiano.net
-                .row
-                  .col-md-8.col-md-offset-2
-                    p msg area
-                    form
-                      .form-group
-                        label.sr-only(for='exampleInputEmail1') Email address
-                        input#exampleInputEmail1.form-control(type='email', placeholder='Enter email')
-                      .form-group
-                        label.sr-only(for='exampleInputPassword1') Password
-                        input#exampleInputPassword1.form-control(type='password', placeholder='Password')
-                      a.btn.btn-primary.btn-block(type='submit', href="/account") Accedi
-                      button.btn.btn-link.btn-block.quiet(type='button') Forgot Password
-                    
-                .row  
-                  .col-md-8.col-md-offset-2
-                    p.small Register here to create a QN login and access ALL services provided by Quotidiano.net
-                    a.btn.btn-default.btn-outline.btn-block(href="#qn-account", type="button") Registrati
-
-
-      .qn-account-register.qn.modal.fade
+    .tab-content
+      .qn-account.qn.modal.fade
           .modal-dialog
             .modal-content
               .modal-header
@@ -98,54 +62,93 @@ html(lang="en")
                   span(aria-hidden='true') ×
               .modal-body
                 .container-fluid
-                  .row
+                  .row.nomargin
                     .col-md-6
                       h2 
-                        img.testata-logo.small(src="{{STATIC_URL}}/img/logo.svg", onerror="this.src='{{STATIC_URL}}/img/logo.png'")
+                        img.testata-logo.small(src="{{STATIC_URL}}/img/logo.svg",onerror="this.src='{{STATIC_URL}}/img/logo.png'")
                     .col-md-6
                       h2 
                         img.testata-logo.small(src="{{STATIC_URL}}/img/qn_white.svg", onerror="this.src='{{STATIC_URL}}/img/qn_white.png'")
                   .row
                     .col-md-12
-                      p.quiet Registrati su Quotidiano.net
+                      p.quiet Accedi a InEdicola con il tuo account di Quotidiano.net
                   .row
                     .col-md-8.col-md-offset-2
-                      p Here is the area for messages and errors.
+                      p msg area
                       form
                         .form-group
-                          label.sr-only(for='') Email address
+                          label.sr-only(for='exampleInputEmail1') Email address
                           input#exampleInputEmail1.form-control(type='email', placeholder='Enter email')
                         .form-group
-                          label.sr-only(for='') Password
+                          label.sr-only(for='exampleInputPassword1') Password
                           input#exampleInputPassword1.form-control(type='password', placeholder='Password')
-                        .form-group
-                          label.sr-only(for='') Password Again
-                          input#exampleInputPassword1.form-control(type='password', placeholder='Password')
-                        .form-group
-                          label.sr-only(for='') Sesso
-                          input#exampleInputPassword1.form-control(type='password', placeholder='Sesso')
-                        .form-group
-                          label.sr-only(for='') Provincia
-                          input#exampleInputPassword1.form-control(type='password', placeholder='Provincia')
-
-                        .form-group
-                          label(for='') Data di nascita
-                          input#exampleInputPassword1.form-control(type='password', placeholder='Password')
-                          p.help-class Questo nome verrà visualizzato pubblicamente.
-
-                        .form-group
-                          label(for='') Display name for the QN Network
-                          input#exampleInputPassword1.form-control(type='password', placeholder='Displayname')
-                          p.help-class Questo nome verrà visualizzato pubblicamente.
-
-                        .checkbox
-                          label.sr-only(for='') Privacy
-                          input(type='checkbox') Ho letto e accetto Info Privacy
-
-                        .form-group
-                          button.btn.btn-primary.btn-block(type='submit', href="/account", value="Registrati") Registrati
+                        a.btn.btn-primary.btn-block(type='submit', href="/account") Accedi
+                        button.btn.btn-link.btn-block.quiet(type='button') Forgot Password
                       
                   .row  
                     .col-md-8.col-md-offset-2
-                      p.small Already a member of QN?
-                      a.btn.btn-default.btn-outline.btn-block(type="button") Login
+                      p.small Register here to create a QN login and access ALL services provided by Quotidiano.net
+                      a.btn.btn-default.btn-outline.btn-block(href=".qn-account-register", role="tab", data-toggle="tab", type="button") Registrati
+
+
+        .qn-account-register.qn.modal.fade
+            .modal-dialog
+              .modal-content
+                .modal-header
+                  a.close.back(type='button', data-toggle='tab', aria-label='Close', href=".qn-account")
+                    span(aria-hidden='true')
+                      .icon.icon-angle-left
+                .modal-body
+                  .container-fluid
+                    .row.nomargin
+                      .col-md-6
+                        h2 
+                          img.testata-logo.small(src="{{STATIC_URL}}/img/logo.svg", onerror="this.src='{{STATIC_URL}}/img/logo.png'")
+                      .col-md-6
+                        h2 
+                          img.testata-logo.small(src="{{STATIC_URL}}/img/qn_white.svg", onerror="this.src='{{STATIC_URL}}/img/qn_white.png'")
+                    .row
+                      .col-md-12
+                        p.quiet Registrati su Quotidiano.net
+                    .row
+                      .col-md-8.col-md-offset-2
+                        p Here is the area for messages and errors.
+                        form
+                          .form-group
+                            label.sr-only(for='') Email address
+                            input#exampleInputEmail1.form-control(type='email', placeholder='Enter email')
+                          .form-group
+                            label.sr-only(for='') Password
+                            input#exampleInputPassword1.form-control(type='password', placeholder='Password')
+                          .form-group
+                            label.sr-only(for='') Password Again
+                            input#exampleInputPassword1.form-control(type='password', placeholder='Password')
+                          .form-group
+                            label.sr-only(for='') Sesso
+                            input#exampleInputPassword1.form-control(type='password', placeholder='Sesso')
+                          .form-group
+                            label.sr-only(for='') Provincia
+                            input#exampleInputPassword1.form-control(type='password', placeholder='Provincia')
+
+                          .form-group
+                            label(for='') Data di nascita
+                            input#exampleInputPassword1.form-control(type='password', placeholder='Password')
+                            p.help-class Questo nome verrà visualizzato pubblicamente.
+
+                          .form-group
+                            label(for='') Display name for the QN Network
+                            input#exampleInputPassword1.form-control(type='password', placeholder='Displayname')
+                            p.help-class Questo nome verrà visualizzato pubblicamente.
+
+                          .checkbox
+                            label
+                              input(type='checkbox') 
+                              | Ho letto e accetto Info Privacy
+
+                          .form-group
+                            button.btn.btn-primary.btn-block(type='submit', href="/account", value="Registrati") Registrati
+                        
+                    .row  
+                      .col-md-8.col-md-offset-2
+                        p.small Already a member of QN?
+                        a.btn.btn-default.btn-outline.btn-block(type="button", data-toggle="tab", role="tab", href=".qn-account") Login

@@ -63,6 +63,11 @@ def create_app(configfile=None):
         opts = defaults.copy()
         return render_template('promo.jade', **opts)
 
+    @inedicola.route('/cartaceo')
+    def cartaceo():
+        opts = defaults.copy()
+        return render_template('cartaceo.jade', **opts)
+
 
     return inedicola
 

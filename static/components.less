@@ -9,7 +9,6 @@ but also some custom
  * LOS LOGOS
  */
 .testata-logo {
-    max-width: 90%;
     &.small {
       max-width: 150px;
       max-height: 30px;
@@ -247,6 +246,9 @@ span.glyphicon, .icon {
  .modal {
     background-color: rgba(255,255,255,0.96);
     text-align: center;
+  .modal-header {
+    min-height: 50px;
+  }
   .modal-content {
     box-shadow: none;
     background: none;
@@ -261,6 +263,9 @@ span.glyphicon, .icon {
     font-size: 42px;
     font-weight: 300;
     display: none;
+    &.back {
+      float: left;
+    }
   }
 }
 
@@ -301,14 +306,6 @@ span.glyphicon, .icon {
       font-size:10px;
       margin-right:10px;
       vertical-align: middle;
-
-      @media (min-width: @screen-sm-max) {
-        display: none;
-      }
-
-      @media (min-width: @screen-lg-min) {
-        display: inline-block;
-      }
     }
 
     // icon
