@@ -38,6 +38,22 @@ but also some custom
     z-index:100;
   }
 }
+
+.navbar-inverse .navbar-toggle {
+  background-color: transparent !important;
+  border:0px;
+}
+
+.navbar-collapse {
+  border: none;
+  box-shadow: none;
+}
+
+.accedi {
+  position: absolute;
+  right: -20px;
+}
+
 /*
  * NAVS
  */
@@ -142,6 +158,10 @@ but also some custom
 .btn-outline {
     background-color:transparent;
     border: 1px solid white;
+    color: white;
+    &:hover {
+      color: white;
+    }
     &.dark {
       border: 1px solid @gray-dark;
       &:hover {

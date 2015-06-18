@@ -21,10 +21,10 @@ html(lang="en")
   body
     .container
       block navbar
-        // Static navbar
         .navbar.navbar-inverse.navbar-transparent(role='navigation')
           .container
             .navbar-header
+              a.btn.btn-outline.pull-right(type="button", data-toggle="modal", data-target=".qn-account") Accedi 
               a.navbar-brand(href='/')
                 img.testata-logo.small(src="{{STATIC_URL}}/img/logo.svg", onerror="this.src='{{STATIC_URL}}/img/logo.png'")
             .navbar-collapse.collapse
