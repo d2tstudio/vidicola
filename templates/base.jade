@@ -24,13 +24,11 @@ html(lang="en")
         .navbar.navbar-inverse.navbar-transparent(role='navigation')
           .container
             .navbar-header
-              a.btn.btn-outline.pull-right.navbar-toggle(type="button", data-toggle="modal", data-target=".qn-account") Accedi 
               a.navbar-brand(href='/')
                 img.testata-logo.small(src="{{STATIC_URL}}/img/logo.svg", onerror="this.src='{{STATIC_URL}}/img/logo.png'")
-            .navbar-collapse.collapse
-              ul.nav.navbar-nav.navbar-right
-                li
-                  a.btn.btn-outline(type="button", data-toggle="modal", data-target=".qn-account") Accedi 
+            ul.nav.navbar-nav.navbar-right
+              li
+                a.btn.btn-outline.accedi(type="button", data-toggle="modal", data-target=".qn-account") Accedi 
             // /.nav-collapse
         // /container    
     
