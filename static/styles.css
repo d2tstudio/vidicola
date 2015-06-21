@@ -4867,10 +4867,10 @@ button.close {
   outline: 0;
 }
 .modal.fade .modal-dialog {
-  -webkit-transform: translate(0, -25%);
-  -ms-transform: translate(0, -25%);
-  -o-transform: translate(0, -25%);
-  transform: translate(0, -25%);
+  -webkit-transform: translate(0, -1%);
+  -ms-transform: translate(0, -1%);
+  -o-transform: translate(0, -1%);
+  transform: translate(0, -1%);
   -webkit-transition: -webkit-transform 0.3s ease-out;
   -moz-transition: -moz-transform 0.3s ease-out;
   -o-transition: -o-transform 0.3s ease-out;
@@ -5729,6 +5729,9 @@ Inedicola
   border: none;
   box-shadow: none;
 }
+.nomargin {
+  margin-bottom: 0px !important;
+}
 .nolabels label {
   display: none;
 }
@@ -5738,6 +5741,10 @@ Inedicola
  */
 .main {
   padding-top: 20px;
+}
+.home .mast .msg h1 {
+  font-size: 42px;
+  line-height: 46px;
 }
 .home h5,
 .home .well {
@@ -5806,9 +5813,6 @@ but also some custom
 /*
  * LOS LOGOS
  */
-.testata-logo {
-  max-width: 90%;
-}
 .testata-logo.small {
   max-width: 150px;
   max-height: 30px;
@@ -5835,6 +5839,24 @@ but also some custom
   position: absolute;
   top: 0px;
   z-index: 100;
+}
+@media (max-width: 992px) {
+  .navbar.navbar-transparent {
+    left: 0px;
+    right: 0px;
+    padding: 0px 20px;
+  }
+}
+.navbar-inverse .navbar-toggle {
+  background-color: transparent !important;
+  border: 0px;
+}
+.navbar-header {
+  float: left;
+}
+.accedi {
+  float: right;
+  position: relative;
 }
 /*
  * NAVS
@@ -5922,6 +5944,9 @@ but also some custom
   background-color: transparent;
   border: 1px solid white;
 }
+.btn-outline:hover {
+  color: white;
+}
 .btn-outline.dark {
   border: 1px solid #333333;
 }
@@ -5972,6 +5997,9 @@ span.glyphicon,
   top: 2px;
   display: inline-block;
 }
+.input-group-addon .icon {
+  margin-right: 0px;
+}
 .form-control-feedback {
   position: absolute;
   margin-right: 0px;
@@ -6007,6 +6035,9 @@ span.glyphicon,
   background-color: rgba(255, 255, 255, 0.96);
   text-align: center;
 }
+.modal .modal-header {
+  min-height: 50px;
+}
 .modal .modal-content {
   box-shadow: none;
   background: none;
@@ -6023,6 +6054,9 @@ span.glyphicon,
   font-size: 42px;
   font-weight: 300;
   display: none;
+}
+.modal .close.back {
+  float: left;
 }
 /*
  * FORMS
@@ -6051,16 +6085,6 @@ select.form-control {
   font-size: 10px;
   margin-right: 10px;
   vertical-align: middle;
-}
-@media (min-width: 991px) {
-  .accessi button.close .smallcaps {
-    display: none;
-  }
-}
-@media (min-width: 1200px) {
-  .accessi button.close .smallcaps {
-    display: inline-block;
-  }
 }
 .accessi button.close .icon {
   top: 5px;
