@@ -36,7 +36,16 @@ but also some custom
     position:absolute;
     top:0px;
     z-index:100;
+
+    // Patch the absolute width bug whereby floating doesn't work
+    @media (max-width: @screen-md-min) {
+      left:0px;
+      right:0px;
+      padding: 0px 20px;
+    }
+
   }
+
 }
 
 .navbar-inverse .navbar-toggle {
